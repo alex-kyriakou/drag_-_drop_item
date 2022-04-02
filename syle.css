@@ -33,6 +33,7 @@ header {
   text-align: center;
   color: var(--text);
   height: 60px;
+  margin: 2rem;
 }
 
 .lists-container {
@@ -42,14 +43,11 @@ header {
 }
 
 .list {
-  display: flex;
-  flex-flow: column;
-  flex: 1;
   width: 100%;
   min-width: 250px;
-  max-width: 350px;
+  max-width: 550px;
   min-height: 150px;
-  height: 100%;
+  //   height: 100%;
   background-color: var(--lists-bg);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
