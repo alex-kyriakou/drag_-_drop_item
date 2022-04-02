@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,300;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #22577e;
+  --lists-bg: #5584ac;
+  --selected: rgba(46, 54, 63, 0.392);
+  --hovered: #faffaf;
+  --text: #effffd;
+}
+
+body {
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-flow: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--text);
+  height: 60px;
+}
+
+.lists-container {
+  display: flex;
+  width: 100vw;
+  padding: 3rem;
+}
+
+.list {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  width: 100%;
+  min-width: 250px;
+  max-width: 350px;
+  min-height: 150px;
+  height: 100%;
+  background-color: var(--lists-bg);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 0.5rem;
+  padding: 2rem 1rem;
+  transition: all 0.2s linear;
+}
+
+.list.selected:hover {
+  background-color: var(--selected);
+}
+
+.list:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.list-item {
+  background-color: #a9a9a9;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 15px 20px;
+  margin: 4px;
+  font-size: 18px;
+  font-family: inherit;
+}
+
+.list-item:hover {
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.212) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.list-item:active {
+  border: 1px solid var(--hovered);
+}
